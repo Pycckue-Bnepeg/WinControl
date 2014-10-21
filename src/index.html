@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Windows Control</title>
+		<meta charset='utf-8'>
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic' rel='stylesheet'>
+		<link href='styles/main.less' rel='stylesheet/less'>
+		<!-- Скрипты -->
+		<script src='../lib/less-1.7.5.js'></script>
+		<script src='../lib/angular.min.js'></script>
+	</head>
+	<body>
+		<div class='search'>
+			<img src='images/search.png' class='search-icon'>
+			<input id='search' class='search-box' placeholder='Поиск' type='text' ng-model='query'>
+		</div>
+		<div id='results' class='results'>
+			<!--<div class='result'>
+				<p>{{ lastQuery }}<span>{{ result }}</span></p>
+			</div>-->
+		</div>
+	</body>
+
+	<script>
+		// Установка глобальных переменных. Запуск Traceur.
+		global.nwrequire = window.require;
+		global.document = window.document;
+		global.angular = window.angular;
+		global.XMLHttpRequest = XMLHttpRequest;
+
+		var traceur = require('traceur');
+
+		traceur.require.makeDefault(function(filename) {
+  			return filename.indexOf('node_modules') === -1;
+		}, { experimental: true });
+
+		require('./app');
+	</script>
+</html>

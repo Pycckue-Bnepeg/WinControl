@@ -1,0 +1,23 @@
+{
+	"name": "WinControl",
+	"description": "Управление компьютером под управлением ОС Windows",
+	"version": "0.0.1",
+	"main": "src/index.html",
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ZOTTCE/WinControl.git"
+	},
+
+	"window": {
+		"frame": false,
+		"toolbar": false,
+		"resizable": true,
+		"position": "center",
+		"transparent": true,
+		"show_in_taskbar": false,
+		"show": false,
+		"width": 800,
+		"height": 400
+	}
+}
